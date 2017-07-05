@@ -1,11 +1,19 @@
+# Deployment Target
+platform :ios, '8.0'
+
+# Ignore pods code warnings
+inhibit_all_warnings!
+
+# Add pods as frameworks so we could add obj-c and swift 3.0 pods
 use_frameworks!
 
+
 target '${POD_NAME}_Example' do
-  pod '${POD_NAME}', :path => '../'
+    pod '${POD_NAME}', :path => '../'
 
-  target '${POD_NAME}_Tests' do
-    inherit! :search_paths
+    target '${POD_NAME}_Tests' do
+        inherit! :search_paths
 
-    ${INCLUDED_PODS}
-  end
+  ${INCLUDED_PODS}
+    end
 end
