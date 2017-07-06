@@ -17,12 +17,12 @@ ${POD_NAME} is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "${POD_NAME}"
+pod '${POD_NAME}'
 ```
 
 ## Author
 
-${USER_NAME}, ${USER_EMAIL}
+Anton Plebanovich, anton.plebanovich@gmail.com
 
 ## License
 
