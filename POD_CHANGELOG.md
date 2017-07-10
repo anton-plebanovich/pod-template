@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 `${POD_NAME}` adheres to [Semantic Versioning](http://semver.org/).
 
-## [1.0.0](https://github.com/APUtils/${POD_NAME}/releases/tag/0.1.0)
+## [1.0.0](https://github.com/APUtils/${POD_NAME}/releases/tag/1.0.0)
 Released on ${DATE}.
 
 #### Added
