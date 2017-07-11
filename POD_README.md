@@ -5,11 +5,15 @@
 [![License](https://img.shields.io/cocoapods/l/${POD_NAME}.svg?style=flat)](http://cocoapods.org/pods/${POD_NAME})
 [![Platform](https://img.shields.io/cocoapods/p/${POD_NAME}.svg?style=flat)](http://cocoapods.org/pods/${POD_NAME})
 
+TODO
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## GIF animation
+
+TODO
 
 ## Installation
 
@@ -23,6 +27,8 @@ pod '${POD_NAME}'
 ```
 
 ## Usage
+
+TODO
 
 See example project for more details.
 
