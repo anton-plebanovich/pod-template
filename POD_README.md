@@ -30,7 +30,7 @@ pod '${POD_NAME}'
 
 TODO
 
-See example project for more details.
+See example and test projects for more details.
 
 ## Contributions
 
