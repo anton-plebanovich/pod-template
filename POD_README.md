@@ -1,9 +1,10 @@
 # ${POD_NAME}
 
-[![CI Status](http://img.shields.io/travis/APUtils/${REPO_NAME}.svg?style=flat)](https://travis-ci.org/APUtils/${REPO_NAME})
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](https://img.shields.io/cocoapods/v/${POD_NAME}.svg?style=flat)](http://cocoapods.org/pods/${POD_NAME})
 [![License](https://img.shields.io/cocoapods/l/${POD_NAME}.svg?style=flat)](http://cocoapods.org/pods/${POD_NAME})
 [![Platform](https://img.shields.io/cocoapods/p/${POD_NAME}.svg?style=flat)](http://cocoapods.org/pods/${POD_NAME})
+[![CI Status](http://img.shields.io/travis/APUtils/${REPO_NAME}.svg?style=flat)](https://travis-ci.org/APUtils/${REPO_NAME})
 
 TODO
 
