@@ -16,7 +16,19 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 TODO
 
+<img src="Example/${POD_NAME}/<#NAME#>.gif"/>
+
 ## Installation
+
+#### Carthage
+
+Please check [official guide](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos)
+
+Cartfile:
+
+```
+github "APUtils/{REPO_NAME}"
+```
 
 #### CocoaPods
 
