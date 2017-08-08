@@ -37,7 +37,7 @@ module Pod
     end
 
     def add_podspec_metadata
-      project_metadata_item = @project.root_object.main_group.children.select { |group| group.name == "Podspec Metadata" }.first
+      project_metadata_item = @project.root_object.main_group.children.select { |group| group.name == "_" }.first
       project_metadata_item.new_file "../.gitignore"
       project_metadata_item.new_file "../.cocoadocs.yml"
       project_metadata_item.new_file "../.travis.yml"
