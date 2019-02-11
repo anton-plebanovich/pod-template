@@ -25,7 +25,8 @@ module Pod
         "PROJECT" => @configurator.pod_name,
         "CPD" => @prefix
       }
-      replace_internal_project_settings
+      replace_internal_project_settings(project_folder)
+      replace_internal_project_settings(carthage_project_folder)
 
       @project = Xcodeproj::Project.open(@xcodeproj_path)
       add_podspec_metadata
@@ -36,6 +37,7 @@ module Pod
       rename_project_folder(project_folder)
       rename_files(carthage_project_folder)
       rename_project_folder(carthage_project_folder)
+      rename_project_folder(carthage_project_folder + "../")
     end
 
     def add_podspec_metadata
@@ -130,13 +132,13 @@ RUBY
 
     end
 
-    def rename_project_folder
+    def rename_project_folder(project_folder)
       if Dir.exist? project_folder + "/PROJECT"
         File.rename(project_folder + "/PROJECT", project_folder + "/" + @configurator.pod_name)
       end
     end
 
-    def replace_internal_project_settings
+    def replace_internal_project_settings(project_folder)
       Dir.glob(project_folder + "/**/**/**/**").each do |name|
         next if Dir.exists? name
         text = File.read(name)
