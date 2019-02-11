@@ -48,7 +48,6 @@ module Pod
       project_metadata_item.new_file "../LICENSE"
       project_metadata_item.new_file "../CHANGELOG.md"
       project_metadata_item.new_file "../README.md"
-      project_metadata_item.new_file "podInstall.command"
       project_metadata_item.new_file "../podCheck.command"
       project_metadata_item.new_file "../podPush.command"
     end
