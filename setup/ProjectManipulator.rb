@@ -22,7 +22,7 @@ module Pod
         "PROJECT_OWNER" => @configurator.user_name,
         "TODAYS_DATE" => @configurator.date,
         "TODAYS_YEAR" => @configurator.year,
-        "PROJECT" => @configurator.pod_name,
+        "PROJECTNAME" => @configurator.pod_name,
         "CPD" => @prefix
       }
       replace_internal_project_settings(project_folder)
@@ -105,28 +105,28 @@ RUBY
 
     def rename_files(project_folder)
       # shared schemes have project specific names
-      scheme_path = project_folder + "/PROJECT.xcodeproj/xcshareddata/xcschemes/"
-      File.rename(scheme_path + "PROJECT.xcscheme", scheme_path +  @configurator.pod_name + "-Example.xcscheme")
+      scheme_path = project_folder + "/PROJECTNAME.xcodeproj/xcshareddata/xcschemes/"
+      File.rename(scheme_path + "PROJECTNAME.xcscheme", scheme_path +  @configurator.pod_name + "-Example.xcscheme")
 
       # rename xcproject
-      File.rename(project_folder + "/PROJECT.xcodeproj", project_folder + "/" +  @configurator.pod_name + ".xcodeproj")
+      File.rename(project_folder + "/PROJECTNAME.xcodeproj", project_folder + "/" +  @configurator.pod_name + ".xcodeproj")
 
       unless @remove_demo_target
         # change app file prefixes
         ["CPDAppDelegate.h", "CPDAppDelegate.m", "CPDViewController.h", "CPDViewController.m"].each do |file|
-          before = project_folder + "/PROJECT/" + file
+          before = project_folder + "/PROJECTNAME/" + file
           next unless File.exists? before
 
-          after = project_folder + "/PROJECT/" + file.gsub("CPD", prefix)
+          after = project_folder + "/PROJECTNAME/" + file.gsub("CPD", prefix)
           File.rename before, after
         end
 
         # rename project related files
-        ["PROJECT-Info.plist", "PROJECT-Prefix.pch", "PROJECT.h"].each do |file|
-          before = project_folder + "/PROJECT/" + file
+        ["PROJECTNAME-Info.plist", "PROJECTNAME-Prefix.pch", "PROJECTNAME.h"].each do |file|
+          before = project_folder + "/PROJECTNAME/" + file
           next unless File.exists? before
 
-          after = project_folder + "/PROJECT/" + file.gsub("PROJECT", @configurator.pod_name)
+          after = project_folder + "/PROJECTNAME/" + file.gsub("PROJECTNAME", @configurator.pod_name)
           File.rename before, after
         end
       end
@@ -134,8 +134,8 @@ RUBY
     end
 
     def rename_project_folder(project_folder)
-      if Dir.exist? project_folder + "/PROJECT"
-        File.rename(project_folder + "/PROJECT", project_folder + "/" + @configurator.pod_name)
+      if Dir.exist? project_folder + "/PROJECTNAME"
+        File.rename(project_folder + "/PROJECTNAME", project_folder + "/" + @configurator.pod_name)
       end
     end
 

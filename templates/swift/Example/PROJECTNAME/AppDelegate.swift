@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  PROJECT
+//  PROJECTNAME
 //
 //  Created by Anton Plebanovich on TODAYS_DATE.
 //  Copyright (c) TODAYS_YEAR Anton Plebanovich. All rights reserved.
