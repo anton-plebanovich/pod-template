@@ -32,8 +32,10 @@ module Pod
       remove_demo_project if @remove_demo_target
       @project.save
 
-      rename_files
-      rename_project_folder
+      rename_files(project_folder)
+      rename_project_folder(project_folder)
+      rename_files(carthage_project_folder)
+      rename_project_folder(carthage_project_folder)
     end
 
     def add_podspec_metadata
@@ -93,8 +95,12 @@ RUBY
     def project_folder
       File.dirname @xcodeproj_path
     end
+    
+    def carthage_project_folder
+        File.dirname @xcodeproj_path + "/../PROJECT/"
+    end
 
-    def rename_files
+    def rename_files(project_folder)
       # shared schemes have project specific names
       scheme_path = project_folder + "/PROJECT.xcodeproj/xcshareddata/xcschemes/"
       File.rename(scheme_path + "PROJECT.xcscheme", scheme_path +  @configurator.pod_name + "-Example.xcscheme")
