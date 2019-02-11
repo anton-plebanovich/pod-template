@@ -99,7 +99,9 @@ RUBY
     end
     
     def carthage_project_folder
-        File.dirname @xcodeproj_path + "/../PROJECT/"
+        directory = File.dirname @xcodeproj_path
+        carthage_directory = File.expand_path("..", directory)
+        carthage_directory + "/PROJECT/"
     end
 
     def rename_files(project_folder)
