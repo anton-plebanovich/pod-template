@@ -2,7 +2,7 @@
 
 import Quick
 import Nimble
-import PROJECT
+@testable import PROJECTNAME
 
 class MainSpec: QuickSpec {
     override func spec() {}
