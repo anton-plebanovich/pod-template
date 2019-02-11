@@ -37,7 +37,6 @@ module Pod
       rename_project_folder(project_folder)
       rename_files(carthage_project_folder)
       rename_project_folder(carthage_project_folder)
-      rename_project_folder(carthage_project_folder + "../")
     end
 
     def add_podspec_metadata
@@ -101,7 +100,7 @@ RUBY
     def carthage_project_folder
         directory = File.dirname @xcodeproj_path
         carthage_directory = File.expand_path("..", directory)
-        carthage_directory + "/PROJECT/"
+        carthage_directory + "/CarthageSupport/"
     end
 
     def rename_files(project_folder)
@@ -123,7 +122,7 @@ RUBY
         end
 
         # rename project related files
-        ["PROJECT-Info.plist", "PROJECT-Prefix.pch"].each do |file|
+        ["PROJECT-Info.plist", "PROJECT-Prefix.pch", "PROJECT.h"].each do |file|
           before = project_folder + "/PROJECT/" + file
           next unless File.exists? before
 
