@@ -27,7 +27,7 @@ Please check [official guide](https://github.com/Carthage/Carthage#if-youre-buil
 Cartfile:
 
 ```
-github "APUtils/{REPO_NAME}"
+github "APUtils/${REPO_NAME}"
 ```
 
 #### CocoaPods
