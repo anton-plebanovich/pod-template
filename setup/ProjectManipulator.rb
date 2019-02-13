@@ -46,8 +46,10 @@ module Pod
       project_metadata_item.new_file "../.travis.yml"
       project_metadata_item.new_file "../" + @configurator.pod_name  + ".podspec"
       project_metadata_item.new_file "../LICENSE"
+      project_metadata_item.new_file "../DEPLOY PROCESS.md"
       project_metadata_item.new_file "../CHANGELOG.md"
       project_metadata_item.new_file "../README.md"
+      project_metadata_item.new_file "../checkBuild.command"
       project_metadata_item.new_file "../podCheck.command"
       project_metadata_item.new_file "../podPush.command"
     end

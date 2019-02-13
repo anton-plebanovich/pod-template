@@ -103,7 +103,7 @@ module Pod
     end
 
     def replace_variables_in_files
-      file_names = ['POD_CHANGELOG.md', 'POD_LICENSE', 'POD_README.md', 'NAME.podspec', '.travis.yml', podfile_path]
+      file_names = ['POD_CHANGELOG.md', 'POD_LICENSE', 'POD_README.md', 'POD_DEPLOY PROCESS.md', 'NAME.podspec', 'checkBuild.command', '.travis.yml', podfile_path]
       file_names.each do |file_name|
         text = File.read(file_name)
         text.gsub!("${POD_NAME}", @pod_name)
@@ -153,6 +153,7 @@ module Pod
 
     def rename_template_files
       FileUtils.mv "POD_README.md", "README.md"
+      FileUtils.mv "POD_DEPLOY PROCESS.md", "DEPLOY PROCESS.md"
       FileUtils.mv "POD_LICENSE", "LICENSE"
       FileUtils.mv "POD_CHANGELOG.md", "CHANGELOG.md"
       FileUtils.mv "NAME.podspec", "#{pod_name}.podspec"
