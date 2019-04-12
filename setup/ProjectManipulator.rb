@@ -31,7 +31,7 @@ module Pod
       @project = Xcodeproj::Project.open(@xcodeproj_path)
       
       add_podspec_metadata(@xcodeproj_path)
-      add_podspec_metadata(carthage_project_folder + "PROJECTNAME.xcodeproj")
+      add_podspec_metadata(carthage_xcodeproj_path)
       
       remove_demo_project if @remove_demo_target
       @project.save
@@ -43,8 +43,8 @@ module Pod
       rename_project_folder(carthage_project_folder)
     end
 
-    def add_podspec_metadata(project_folder)
-      project = Xcodeproj::Project.open(project_folder)
+    def add_podspec_metadata(project_path)
+      project = Xcodeproj::Project.open(project_path)
       project_metadata_item = project.root_object.main_group.children.select { |group| group.name == "_" }.first
       project_metadata_item.new_file "../.gitignore"
       project_metadata_item.new_file "../.cocoadocs.yml"
@@ -103,6 +103,10 @@ RUBY
         directory = File.dirname @xcodeproj_path
         carthage_directory = File.expand_path("..", directory)
         carthage_directory + "/Carthage Project/"
+    end
+    
+    def carthage_xcodeproj_path
+        carthage_project_folder + "PROJECTNAME.xcodeproj"
     end
 
     def rename_files(project_folder)
