@@ -141,7 +141,7 @@ module Pod
     end
 
     def customise_prefix
-      prefix_path = "Example/Tests/Tests-Prefix.pch"
+      prefix_path = "Pods Project/Tests/Tests-Prefix.pch"
       return unless File.exists? prefix_path
 
       pch = File.read prefix_path
