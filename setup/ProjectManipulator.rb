@@ -57,6 +57,7 @@ module Pod
       project_metadata_item.new_file "../checkBuild.command"
       project_metadata_item.new_file "../podCheck.command"
       project_metadata_item.new_file "../podPush.command"
+      project.save
     end
 
     def remove_demo_project
