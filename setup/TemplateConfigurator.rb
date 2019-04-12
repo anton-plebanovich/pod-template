@@ -76,8 +76,8 @@ module Pod
       add_pods_to_podfile
       customise_prefix
       rename_classes_folder
-      reinitialize_git_repo
       run_pod_install
+      reinitialize_git_repo
 
       @message_bank.farewell_message
     end
@@ -88,12 +88,9 @@ module Pod
       puts "\nRunning " + "pod install".magenta + " on your new library."
       puts ""
 
-      Dir.chdir("Example") do
+      Dir.chdir("Pods Project") do
         system "pod install"
       end
-
-      `git add Example/#{pod_name}.xcodeproj/project.pbxproj`
-      `git commit -m "Initial commit"`
     end
 
     def clean_template_files
@@ -142,10 +139,17 @@ module Pod
       File.open(prefix_path, "w") { |file| file.puts pch }
     end
 
-    def set_test_framework(test_type, extension)
-      content_path = "setup/test_examples/" + test_type + "." + extension
-      folder = extension == "m" ? "ios" : "swift"
-      tests_path = "templates/" + folder + "/Example/Tests/Tests." + extension
+    def set_test_framework(test_type)
+      content_path = "setup/test_examples/" + test_type + ".swift"
+      
+      # Carthage
+      tests_path = "templates/swift/Carthage Project/Tests/Tests.swift"
+      tests = File.read tests_path
+      tests.gsub!("${TEST_EXAMPLE}", File.read(content_path) )
+      File.open(tests_path, "w") { |file| file.puts tests }
+      
+      # Pods
+      tests_path = "templates/swift/Pods Project/Tests/Tests.swift"
       tests = File.read tests_path
       tests.gsub!("${TEST_EXAMPLE}", File.read(content_path) )
       File.open(tests_path, "w") { |file| file.puts tests }
@@ -167,6 +171,7 @@ module Pod
       `rm -rf .git`
       `git init`
       `git add -A`
+      `git commit -m "Initial commit"`
     end
 
     def validate_user_details

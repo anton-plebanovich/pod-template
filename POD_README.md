@@ -10,7 +10,7 @@ TODO
 
 ## Example
 
-To run the example project, clone the repo, and run `carthage install` from the `Carthage Project` directory first. Then open `${POD_NAME}.xcodeproj`
+Clone the repo and then open `Carthage Project/${POD_NAME}.xcodeproj`
 
 ## GIF animation
 
