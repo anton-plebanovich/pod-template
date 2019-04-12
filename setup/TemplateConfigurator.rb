@@ -99,7 +99,7 @@ module Pod
         puts ""
         
         Dir.chdir("Carthage Project/Scripts/Carthage") do
-            system "bash carthageInstallTests.command"
+            system "bash carthageInstall.command"
         end
     end
 
