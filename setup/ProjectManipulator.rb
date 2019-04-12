@@ -30,8 +30,8 @@ module Pod
 
       @project = Xcodeproj::Project.open(@xcodeproj_path)
       
-      add_podspec_metadata(project_folder)
-      add_podspec_metadata(carthage_project_folder)
+      add_podspec_metadata(@xcodeproj_path)
+      add_podspec_metadata(carthage_project_folder + "PROJECTNAME.xcodeproj")
       
       remove_demo_project if @remove_demo_target
       @project.save
