@@ -77,10 +77,6 @@ module Pod
       product = @project.products.select { |product| product.path == @configurator.pod_name + "_Example.app" }.first
       product.remove_from_project
 
-      # Remove the actual folder + files for both projects
-      `rm -rf templates/ios/Example/PROJECT`
-      `rm -rf templates/swift/Example/PROJECT`
-
       # Replace the Podfile with a simpler one with only one target
       podfile_path = project_folder + "/Podfile"
       podfile_text = <<-RUBY
@@ -101,7 +97,7 @@ RUBY
     def carthage_project_folder
         directory = File.dirname @xcodeproj_path
         carthage_directory = File.expand_path("..", directory)
-        carthage_directory + "/CarthageSupport/"
+        carthage_directory + "/Carthage Project/"
     end
 
     def rename_files(project_folder)
