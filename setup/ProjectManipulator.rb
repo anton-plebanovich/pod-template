@@ -29,18 +29,23 @@ module Pod
       replace_internal_project_settings(carthage_project_folder)
 
       @project = Xcodeproj::Project.open(@xcodeproj_path)
+      
       add_podspec_metadata(project_folder)
+      add_podspec_metadata(carthage_project_folder)
+      
       remove_demo_project if @remove_demo_target
       @project.save
 
       rename_files(project_folder)
-      rename_project_folder(project_folder)
       rename_files(carthage_project_folder)
+      
+      rename_project_folder(project_folder)
       rename_project_folder(carthage_project_folder)
     end
 
     def add_podspec_metadata(project_folder)
-      project_metadata_item = Xcodeproj::Project.open(project_folder).root_object.main_group.children.select { |group| group.name == "_" }.first
+      project = Xcodeproj::Project.open(project_folder)
+      project_metadata_item = project.root_object.main_group.children.select { |group| group.name == "_" }.first
       project_metadata_item.new_file "../.gitignore"
       project_metadata_item.new_file "../.cocoadocs.yml"
       project_metadata_item.new_file "../.travis.yml"
