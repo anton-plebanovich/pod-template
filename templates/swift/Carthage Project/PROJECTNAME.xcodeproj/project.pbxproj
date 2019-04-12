@@ -111,10 +111,19 @@
 		E202681522117D03004CC28A /* PROJECTNAME */ = {
 			isa = PBXGroup;
 			children = (
+				E2766F332260FFF7003BDA19 /* _Classes */,
 				E202681622117D03004CC28A /* PROJECTNAME.h */,
 				E202681722117D03004CC28A /* Info.plist */,
 			);
 			path = PROJECTNAME;
+			sourceTree = "<group>";
+		};
+		E2766F332260FFF7003BDA19 /* _Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = _Classes;
+			path = ../../RxUtils/Classes;
 			sourceTree = "<group>";
 		};
 		E2A7394C2260CFC700E97D55 /* Example */ = {
