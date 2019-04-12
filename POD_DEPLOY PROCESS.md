@@ -1,4 +1,4 @@
-- Assure `CarthageSupport/${POD_NAME}.xcodeproj` and `Example/${POD_NAME}.xcworkspace` have all dependencies added.
+- Assure `Carthage Project/${POD_NAME}.xcodeproj` and `Pods Project/${POD_NAME}.xcworkspace` have all dependencies added.
 - Run `checkBuild.command`
 - Change version in podspec
 - Run `podUpdate.command`
