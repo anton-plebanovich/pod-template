@@ -27,7 +27,7 @@ Please check [official guide](https://github.com/Carthage/Carthage#if-youre-buil
 Cartfile:
 
 ```
-github "APUtils/${REPO_NAME}"
+github "APUtils/${REPO_NAME}" ~> 1.0
 ```
 
 #### CocoaPods
@@ -36,7 +36,7 @@ ${POD_NAME} is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod '${POD_NAME}'
+pod '${POD_NAME}', '~> 1.0'
 ```
 
 ## Usage
