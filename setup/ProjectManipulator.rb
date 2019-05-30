@@ -18,6 +18,8 @@ module Pod
     end
 
     def run
+      FileUtils.mkdir_p 'Carthage/Build/iOS'
+      
       @string_replacements = {
         "PROJECT_OWNER" => @configurator.user_name,
         "TODAYS_DATE" => @configurator.date,

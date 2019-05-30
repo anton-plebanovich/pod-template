@@ -98,8 +98,6 @@ module Pod
         puts "\nRunning " + "carthage bootstrap".magenta + " on your new library."
         puts ""
         
-        FileUtils.mkdir_p 'Carthage/Build/iOS'
-        
         Dir.chdir("Carthage Project/Scripts/Carthage") do
             system "bash carthageInstall.command"
         end
