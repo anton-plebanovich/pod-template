@@ -8,11 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
+    
+    // ******************************* MARK: - @IBOutlets
+    
+    // ******************************* MARK: - Initialization and Setup
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
     }
 }
-
