@@ -2,8 +2,16 @@
 
 import Quick
 import Nimble
-import PROJECTNAME
+@testable import PROJECTNAME
 
 class MainSpec: QuickSpec {
-    override func spec() {}
+    override func spec() {
+        describe("<#Class Name#>") {
+            context("TODO") {
+                it("FIXME") {
+                    expect("FIXME").to(equal("TODO"))
+                }
+            }
+        }
+    }
 }
