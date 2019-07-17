@@ -94,6 +94,8 @@
 		E2A739642260CFC800E97D55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2A7396C2260D99900E97D55 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		E2A7396D2260D99900E97D55 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		E2C3136822DF77F300D6797A /* __ReferenceImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __ReferenceImages; sourceTree = "<group>"; };
+		E2C3136922DF77F300D6797A /* __FailureDiffs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = __FailureDiffs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,8 +197,10 @@
 		E2A739612260CFC800E97D55 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				E2A739622260CFC800E97D55 /* Tests.swift */,
+				E2C3136922DF77F300D6797A /* __FailureDiffs */,
+				E2C3136822DF77F300D6797A /* __ReferenceImages */,
 				E2A739642260CFC800E97D55 /* Info.plist */,
+				E2A739622260CFC800E97D55 /* Tests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
