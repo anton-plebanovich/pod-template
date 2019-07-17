@@ -14,8 +14,6 @@ module Pod
     def perform
       keep_demo = "Yes".to_sym
       
-      configurator.add_pod_to_podfile "Quick"
-      configurator.add_pod_to_podfile "Nimble"
       configurator.set_test_framework "quick"
 
       snapshots = configurator.ask_with_answers("Would you like to do view based testing", ["Yes", "No"]).to_sym

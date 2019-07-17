@@ -159,12 +159,6 @@ module Pod
       tests = File.read tests_path
       tests.gsub!("${TEST_EXAMPLE}", File.read(content_path) )
       File.open(tests_path, "w") { |file| file.puts tests }
-      
-      # Pods
-      tests_path = "templates/swift/Pods Project/Tests/Tests.swift"
-      tests = File.read tests_path
-      tests.gsub!("${TEST_EXAMPLE}", File.read(content_path) )
-      File.open(tests_path, "w") { |file| file.puts tests }
     end
 
     def rename_template_files
