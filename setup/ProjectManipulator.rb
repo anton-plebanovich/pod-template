@@ -89,8 +89,6 @@ module Pod
 use_frameworks!
 target '#{test_target.name}' do
   pod '#{@configurator.pod_name}', :path => '../'
-  
-  ${INCLUDED_PODS}
 end
 RUBY
       File.open(podfile_path, "w") { |file| file.puts podfile_text }

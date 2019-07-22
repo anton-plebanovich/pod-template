@@ -73,7 +73,6 @@ module Pod
       replace_variables_in_files
       clean_template_files
       rename_template_files
-      add_pods_to_podfile
       customise_prefix
       rename_classes_folder
       run_pod_install
@@ -127,15 +126,6 @@ module Pod
 
     def add_pod_to_podfile podname
       @pods_for_podfile << podname
-    end
-
-    def add_pods_to_podfile
-      podfile = File.read podfile_path
-      podfile_content = @pods_for_podfile.map do |pod|
-        "      pod '" + pod + "'"
-      end.join("\n  ")
-      podfile.gsub!("${INCLUDED_PODS}", podfile_content)
-      File.open(podfile_path, "w") { |file| file.puts podfile }
     end
 
     def add_line_to_pch line
