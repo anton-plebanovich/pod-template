@@ -151,6 +151,7 @@ RUBY
     def replace_internal_project_settings(project_folder)
       Dir.glob(project_folder + "/**/**/**/**").each do |name|
         next if Dir.exists? name
+        next if not File.symlink?(name)
         text = File.read(name)
 
         for find, replace in @string_replacements
