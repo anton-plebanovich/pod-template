@@ -76,7 +76,7 @@ module Pod
       customise_prefix
       rename_classes_folder
       run_pod_install
-      run_carthage_bootstrap
+      FileUtils.mkdir_p 'Carthage/Build/iOS'
       reinitialize_git_repo
 
       @message_bank.farewell_message
@@ -91,17 +91,6 @@ module Pod
       Dir.chdir("Pods Project") do
         system "pod install"
       end
-    end
-    
-    def run_carthage_bootstrap
-        puts "\nRunning " + "carthage bootstrap".magenta + " on your new library."
-        puts ""
-        
-        FileUtils.mkdir_p 'Carthage/Build/iOS'
-        
-        Dir.chdir("Carthage Project/Scripts/Carthage") do
-            system "bash carthageInstall.command"
-        end
     end
 
     def clean_template_files
