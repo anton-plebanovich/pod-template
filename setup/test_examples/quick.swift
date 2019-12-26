@@ -10,7 +10,7 @@ class MainSpec: QuickSpec {
         describe("<#Class Name#>") {
             context("TODO") {
                 it("FIXME") {
-                    expect("FIXME").to(equal("TODO"))
+                    expect("FIXME").to(equal("FIXME"))
                 }
             }
         }
