@@ -16,13 +16,6 @@ module Pod
       
       configurator.set_test_framework "quick"
 
-      snapshots = configurator.ask_with_answers("Would you like to do view based testing", ["Yes", "No"]).to_sym
-      case snapshots
-        when :yes
-          configurator.add_pod_to_podfile "FBSnapshotTestCase"
-          configurator.add_pod_to_podfile "Nimble-Snapshots"
-      end
-
       Pod::ProjectManipulator.new({
         :configurator => @configurator,
         :xcodeproj_path => "templates/swift/Pods Project/PROJECTNAME.xcodeproj",
