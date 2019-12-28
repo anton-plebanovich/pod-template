@@ -305,15 +305,15 @@
 				TargetAttributes = {
 					E202681222117D03004CC28A = {
 						CreatedOnToolsVersion = 10.1;
-                        LastSwiftMigration = 1130;
+						LastSwiftMigration = 1130;
 					};
 					E2A7394A2260CFC700E97D55 = {
 						CreatedOnToolsVersion = 10.1;
-                        LastSwiftMigration = 1130;
+						LastSwiftMigration = 1130;
 					};
 					E2A7395D2260CFC800E97D55 = {
 						CreatedOnToolsVersion = 10.1;
-                        LastSwiftMigration = 1130;
+						LastSwiftMigration = 1130;
 						TestTargetID = E2A7394A2260CFC700E97D55;
 					};
 				};
@@ -626,7 +626,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.convene.Elevate.PROJECTNAME;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.PROJECTNAME";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -653,7 +653,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.convene.Elevate.PROJECTNAME;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.PROJECTNAME";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -676,7 +676,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.PROJECTNAME-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.PROJECTNAME-Example${DEVELOPMENT_TEAM}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -698,7 +698,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.PROJECTNAME-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.PROJECTNAME-Example${DEVELOPMENT_TEAM}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -720,7 +720,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.PROJECTNAME-ExampleTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.PROJECTNAME-ExampleTests${DEVELOPMENT_TEAM}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
@@ -743,7 +743,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.PROJECTNAME-ExampleTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.PROJECTNAME-ExampleTests${DEVELOPMENT_TEAM}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
