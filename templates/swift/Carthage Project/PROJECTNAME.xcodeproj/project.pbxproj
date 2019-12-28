@@ -187,7 +187,8 @@
 				E2A739562260CFC800E97D55 /* LaunchScreen.storyboard */,
 				E2A739592260CFC800E97D55 /* Info.plist */,
 			);
-			path = Example;
+			name = Example;
+			path = ../Example;
 			sourceTree = "<group>";
 		};
 		E2A739612260CFC800E97D55 /* Tests */ = {
@@ -670,7 +671,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Example/Info.plist;
+				INFOPLIST_FILE = ../Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -692,7 +693,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = Example/Info.plist;
+				INFOPLIST_FILE = ../Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
