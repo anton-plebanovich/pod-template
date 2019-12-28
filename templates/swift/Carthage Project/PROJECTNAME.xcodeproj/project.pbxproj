@@ -299,18 +299,21 @@
 		E202680A22117D03004CC28A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Anton Plebanovich";
 				TargetAttributes = {
 					E202681222117D03004CC28A = {
 						CreatedOnToolsVersion = 10.1;
+                        LastSwiftMigration = 1130;
 					};
 					E2A7394A2260CFC700E97D55 = {
 						CreatedOnToolsVersion = 10.1;
+                        LastSwiftMigration = 1130;
 					};
 					E2A7395D2260CFC800E97D55 = {
 						CreatedOnToolsVersion = 10.1;
+                        LastSwiftMigration = 1130;
 						TestTargetID = E2A7394A2260CFC700E97D55;
 					};
 				};
