@@ -14,7 +14,7 @@ echo -e "\nBuilding Carthage project..."
 set -o pipefail && xcodebuild -project "Carthage Project/${POD_NAME}.xcodeproj" -sdk iphonesimulator -target "Example" | xcpretty
 
 echo -e "\nBuilding with Carthage..."
-carthage build --no-skip-current
+carthage build --no-skip-current --cache-builds
 
 echo -e "\nPerforming tests..."
 simulator_id="$(xcrun simctl list devices available | grep "iPhone SE" | tail -1 | sed -e "s/.*iPhone SE (//g" -e "s/).*//g")"
