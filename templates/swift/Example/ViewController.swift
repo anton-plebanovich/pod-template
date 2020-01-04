@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  PROJECTNAME-Example
+//  ${POD_NAME}-Example
 //
 //  Created by Anton Plebanovich on ${DATE}.
 //  Copyright © ${YEAR} Anton Plebanovich. All rights reserved.

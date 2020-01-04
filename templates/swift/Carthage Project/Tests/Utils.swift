@@ -1,6 +1,6 @@
 //
 //  Utils.swift
-//  PROJECTNAME
+//  ${POD_NAME}
 //
 //  Created by Anton Plebanovich on ${DATE}.
 //  Copyright © ${YEAR} Anton Plebanovich. All rights reserved.
