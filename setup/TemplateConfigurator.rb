@@ -112,7 +112,7 @@ module Pod
       'Example/AppDelegate.swift',
       'Example/ViewController.swift',
       'Carthage Project/Tests/Utils.swift',
-      'Carthage Project/${POD_NAME}/${POD_NAME}.h'
+      "Carthage Project/${POD_NAME}/${POD_NAME}.h"
       ]
 
       file_names.each do |file_name|
