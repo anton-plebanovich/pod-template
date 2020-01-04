@@ -2,8 +2,8 @@
 //  Utils.swift
 //  PROJECTNAME
 //
-//  Created by ${USER_NAME} on ${DATE}.
-//  Copyright © ${YEAR} ${USER_NAME}. All rights reserved.
+//  Created by Anton Plebanovich on ${DATE}.
+//  Copyright © ${YEAR} Anton Plebanovich. All rights reserved.
 //
 
 import UIKit
