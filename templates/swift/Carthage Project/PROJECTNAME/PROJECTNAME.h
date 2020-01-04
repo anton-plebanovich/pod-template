@@ -2,8 +2,8 @@
 //  PROJECTNAME.h
 //  PROJECTNAME
 //
-//  Created by Anton Plebanovich on 2/11/19.
-//  Copyright © 2019 Anton Plebanovich. All rights reserved.
+//  Created by ${USER_NAME} on ${DATE}.
+//  Copyright © ${YEAR} ${USER_NAME}. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

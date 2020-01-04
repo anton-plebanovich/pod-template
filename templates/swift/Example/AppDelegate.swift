@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  PROJECTNAME-Example
 //
-//  Created by Anton Plebanovich on 4/12/19.
-//  Copyright © 2019 Anton Plebanovich. All rights reserved.
+//  Created by ${USER_NAME} on ${DATE}.
+//  Copyright © ${YEAR} ${USER_NAME}. All rights reserved.
 //
 
 import UIKit

@@ -100,7 +100,21 @@ module Pod
     end
 
     def replace_variables_in_files
-      file_names = ['POD_CHANGELOG.md', 'POD_LICENSE', 'POD_README.md', 'POD_DEPLOY PROCESS.md', 'NAME.podspec', 'checkBuild.command', '.travis.yml', podfile_path]
+      file_names = [
+      'POD_CHANGELOG.md',
+      'POD_LICENSE',
+      'POD_README.md',
+      'POD_DEPLOY PROCESS.md',
+      'NAME.podspec',
+      'checkBuild.command',
+      '.travis.yml',
+      podfile_path,
+      'templates/swift/Example/AppDelegate.swift',
+      'templates/swift/Example/ViewController.swift',
+      'templates/swift/Carthage Project/Tests/Utils.swift',
+      'templates/swift/Carthage Project/PROJECTNAME/PROJECTNAME.h'
+      ]
+
       file_names.each do |file_name|
         text = File.read(file_name)
         text.gsub!("${POD_NAME}", @pod_name)
