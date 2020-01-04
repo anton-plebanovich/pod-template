@@ -109,10 +109,10 @@ module Pod
       'checkBuild.command',
       '.travis.yml',
       podfile_path,
-      'templates/swift/Example/AppDelegate.swift',
-      'templates/swift/Example/ViewController.swift',
-      'templates/swift/Carthage Project/Tests/Utils.swift',
-      'templates/swift/Carthage Project/PROJECTNAME/PROJECTNAME.h'
+      'Example/AppDelegate.swift',
+      'Example/ViewController.swift',
+      'Carthage Project/Tests/Utils.swift',
+      'Carthage Project/${POD_NAME}/${POD_NAME}.h'
       ]
 
       file_names.each do |file_name|
