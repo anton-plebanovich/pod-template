@@ -7,9 +7,13 @@ cd "$base_dir"
 
 echo ""
 echo -e "\nChecking Carthage integrity..."
+carthage_xcodeproj_path="Carthage Project/${POD_NAME}.xcodeproj"
+carthage_pbxproj_path="${carthage_xcodeproj_path}/project.pbxproj"
 swift_files=$(find '${POD_NAME}/Classes' -type f -name "*.swift" | grep -o "[0-9a-zA-Z+ ]*.swift" | sort -fu)
 swift_files_count=$(echo "${swift_files}" | wc -l | tr -d ' ')
-swift_files_in_project=$(sed -n '/Begin PBXSourcesBuildPhase/,/End PBXSourcesBuildPhase section/p;/End PBXSourcesBuildPhase/q' 'Carthage Project/${POD_NAME}.xcodeproj/project.pbxproj' | sed -n '/files =/,/);/p;/);/q' | sed '1d;$d' | grep -o "[A-Z].[0-9a-zA-Z+ ]*\.swift" | sort -fu)
+
+build_section_id=$(sed -n -e '/\/\* ${POD_NAME} \*\/ = {/,/};/p' "${carthage_pbxproj_path}" | sed -n '/PBXNativeTarget/,/Sources/p' | tail -1 | tr -d "\t" | cut -d ' ' -f 1)
+swift_files_in_project=$(sed -n "/${build_section_id}.* = {/,/};/p" "${carthage_pbxproj_path}" | grep -o "[A-Z].[0-9a-zA-Z+ ]*\.swift" | sort -fu)
 swift_files_in_project_count=$(echo "${swift_files_in_project}" | wc -l | tr -d ' ')
 if [ "${swift_files_count}" -ne "${swift_files_in_project_count}" ]; then
     echo  >&2 "error: Carthage project missing dependencies."
@@ -25,7 +29,7 @@ echo -e "\nBuilding Pods project..."
 set -o pipefail && xcodebuild -workspace "Pods Project/${POD_NAME}.xcworkspace" -scheme "${POD_NAME}-Example" -configuration "Release" -sdk iphonesimulator | xcpretty
 
 echo -e "\nBuilding Carthage project..."
-set -o pipefail && xcodebuild -project "Carthage Project/${POD_NAME}.xcodeproj" -sdk iphonesimulator -target "Example" | xcpretty
+set -o pipefail && xcodebuild -project "${carthage_xcodeproj_path}" -sdk iphonesimulator -target "Example" | xcpretty
 
 echo -e "\nBuilding with Carthage..."
 carthage build --no-skip-current --cache-builds
@@ -40,7 +44,7 @@ else
     echo "Using iPhone SE simulator with ID: '${simulator_id}'"
 fi
 
-set -o pipefail && xcodebuild -project "Carthage Project/${POD_NAME}.xcodeproj" -sdk iphonesimulator -scheme "Example" -destination "platform=iOS Simulator,id=${simulator_id}" test | xcpretty
+set -o pipefail && xcodebuild -project "${carthage_xcodeproj_path}" -sdk iphonesimulator -scheme "Example" -destination "platform=iOS Simulator,id=${simulator_id}" test | xcpretty
 
 echo ""
 echo "SUCCESS!"
