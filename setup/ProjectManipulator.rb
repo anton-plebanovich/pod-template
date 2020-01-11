@@ -28,11 +28,10 @@ module Pod
       replace_internal_project_settings(project_folder)
       replace_internal_project_settings(carthage_project_folder)
 
-      @project = Xcodeproj::Project.open(@xcodeproj_path)
-      
       add_podspec_metadata(@xcodeproj_path)
       add_podspec_metadata(carthage_xcodeproj_path)
       
+      @project = Xcodeproj::Project.open(@xcodeproj_path)
       remove_demo_project if @remove_demo_target
       @project.save
 
