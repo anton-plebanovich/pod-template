@@ -84,7 +84,7 @@
 		E202681322117D03004CC28A /* PROJECTNAME.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PROJECTNAME.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E202681622117D03004CC28A /* PROJECTNAME.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PROJECTNAME.h; sourceTree = "<group>"; };
 		E202681722117D03004CC28A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2A7394B2260CFC700E97D55 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2A7394B2260CFC700E97D55 /* PROJECTNAME-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PROJECTNAME-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2A7394D2260CFC700E97D55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2A7394F2260CFC700E97D55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E2A739522260CFC700E97D55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				E202681322117D03004CC28A /* PROJECTNAME.framework */,
-				E2A7394B2260CFC700E97D55 /* Example.app */,
+				E2A7394B2260CFC700E97D55 /* PROJECTNAME-Example.app */,
 				E2A7395E2260CFC800E97D55 /* Tests.xctest */,
 			);
 			name = Products;
@@ -260,9 +260,9 @@
 			productReference = E202681322117D03004CC28A /* PROJECTNAME.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E2A7394A2260CFC700E97D55 /* Example */ = {
+		E2A7394A2260CFC700E97D55 /* PROJECTNAME-Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E2A739692260CFC800E97D55 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildConfigurationList = E2A739692260CFC800E97D55 /* Build configuration list for PBXNativeTarget "PROJECTNAME-Example" */;
 			buildPhases = (
 				6960B3CE5722CE5FDD8F8F8D /* Carthage Install */,
 				E2A739472260CFC700E97D55 /* Sources */,
@@ -276,9 +276,9 @@
 			dependencies = (
 				E275E08622A03A8900E9900C /* PBXTargetDependency */,
 			);
-			name = Example;
+			name = "PROJECTNAME-Example";
 			productName = "PROJECTNAME-Example";
-			productReference = E2A7394B2260CFC700E97D55 /* Example.app */;
+			productReference = E2A7394B2260CFC700E97D55 /* PROJECTNAME-Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E2A7395D2260CFC800E97D55 /* Tests */ = {
@@ -340,7 +340,7 @@
 			projectRoot = "";
 			targets = (
 				E202681222117D03004CC28A /* PROJECTNAME */,
-				E2A7394A2260CFC700E97D55 /* Example */,
+				E2A7394A2260CFC700E97D55 /* PROJECTNAME-Example */,
 				E2A7395D2260CFC800E97D55 /* Tests */,
 			);
 		};
@@ -468,7 +468,7 @@
 		};
 		E2A739602260CFC800E97D55 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E2A7394A2260CFC700E97D55 /* Example */;
+			target = E2A7394A2260CFC700E97D55 /* PROJECTNAME-Example */;
 			targetProxy = E2A7395F2260CFC800E97D55 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -784,7 +784,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E2A739692260CFC800E97D55 /* Build configuration list for PBXNativeTarget "Example" */ = {
+		E2A739692260CFC800E97D55 /* Build configuration list for PBXNativeTarget "PROJECTNAME-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E2A739652260CFC800E97D55 /* Debug */,
