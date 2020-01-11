@@ -10,7 +10,7 @@ import UIKit
 import Nimble
 import Nimble_Snapshots
 import Quick
-@testable import PROJECTNAME
+@testable import PROJECTNAME_Example
 
 // ******************************* MARK: - UI Tests Window
 

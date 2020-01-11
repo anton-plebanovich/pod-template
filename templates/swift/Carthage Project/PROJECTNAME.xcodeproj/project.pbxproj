@@ -735,7 +735,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.PROJECTNAME-ExampleTests${DEVELOPMENT_TEAM}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PROJECTNAME-Example.app/PROJECTNAME-Example";
 			};
 			name = Debug;
 		};
@@ -759,7 +759,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anton-plebanovich.PROJECTNAME-ExampleTests${DEVELOPMENT_TEAM}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PROJECTNAME-Example.app/PROJECTNAME-Example";
 			};
 			name = Release;
 		};
