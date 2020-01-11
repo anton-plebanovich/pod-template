@@ -113,7 +113,8 @@ RUBY
       scheme_path = project_folder + "/PROJECTNAME.xcodeproj/xcshareddata/xcschemes/"
       if File.exist?(scheme_path + "PROJECTNAME.xcscheme")
           File.rename(scheme_path + "PROJECTNAME.xcscheme", scheme_path +  @configurator.pod_name + ".xcscheme")
-      elsif File.exist?(scheme_path + "PROJECTNAME-Example.xcscheme")
+      end
+      if File.exist?(scheme_path + "PROJECTNAME-Example.xcscheme")
           File.rename(scheme_path + "PROJECTNAME-Example.xcscheme", scheme_path +  @configurator.pod_name + "-Example.xcscheme")
       end
 
