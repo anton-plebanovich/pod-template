@@ -85,7 +85,15 @@ enum Utils {
 /// Set to true to update snapshots
 private let recordSnapshots = false
 
+private let clearFailureDiffsOnce: Void = {
+    guard let failureDiffsURLString = ProcessInfo.processInfo.environment["IMAGE_DIFF_DIR"]?.asFileURL else { return }
+    try? FileManager.default.removeItem(at: failureDiffsURLString)
+}()
+
 func haveValidSnapshot(named name: String? = nil, identifier: String? = nil, usesDrawRect: Bool = false, tolerance: CGFloat? = 0.005) -> Predicate<Snapshotable> {
+    
+    _ = clearFailureDiffsOnce
+    
     if recordSnapshots {
         return recordSnapshot(named: name, identifier: identifier, usesDrawRect: usesDrawRect)
     } else {
