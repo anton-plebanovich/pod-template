@@ -29,6 +29,8 @@ echo -e "\nBuilding Pods project..."
 set -o pipefail && xcodebuild -workspace "Pods Project/${POD_NAME}.xcworkspace" -scheme "${POD_NAME}-Example" -configuration "Release" -sdk iphonesimulator | xcpretty
 
 echo -e "\nBuilding Carthage project..."
+. "./Carthage Project/Scripts/Carthage/utils.sh"
+applyXcode12Workaround
 set -o pipefail && xcodebuild -project "${carthage_xcodeproj_path}" -sdk iphonesimulator -target "${POD_NAME}-Example" | xcpretty
 
 echo -e "\nBuilding with Carthage..."
