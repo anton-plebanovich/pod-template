@@ -8,6 +8,13 @@
 
 import UIKit
 
+
+
+
+// TODO: Add linting, code formatting and sorting commit hook.
+
+
+
 final class ViewController: UIViewController {
     
     // ******************************* MARK: - @IBOutlets
