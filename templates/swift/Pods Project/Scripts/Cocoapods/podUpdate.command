@@ -35,5 +35,23 @@ else
     pod update $pod_name
 fi
 
+exit_code=$?
+
+# Check if repo needs update
+# * `31` Spec not found (i.e out-of-date source repos, mistyped Pod name etc...)
+echo "Exit code: ${exit_code}"
+if [ ${exit_code} -eq 31 ]; then
+    echo "Fixing outdated repo"
+    pod repo update
+    pod update $pod_name
+    
+elif [ ${exit_code} -eq 0 ]; then
+    # Break
+    :
+    
+else
+    exit ${exit_code}
+fi
+
 echo "Fixing warnings"
 fixWarnings

@@ -102,9 +102,10 @@ module Pod
     def replace_variables_in_files
       file_names = [
       'POD_CHANGELOG.md',
-      'POD_LICENSE',
-      'POD_README.md',
       'POD_DEPLOY PROCESS.md',
+      'POD_LICENSE',
+      'POD_Package.swift',
+      'POD_README.md',
       'NAME.podspec',
       'checkBuild.command',
       '.travis.yml',
@@ -155,11 +156,12 @@ module Pod
     end
 
     def rename_template_files
-      FileUtils.mv "POD_README.md", "README.md"
+      FileUtils.mv "NAME.podspec", "#{pod_name}.podspec"
+      FileUtils.mv "POD_CHANGELOG.md", "CHANGELOG.md"
       FileUtils.mv "POD_DEPLOY PROCESS.md", "DEPLOY PROCESS.md"
       FileUtils.mv "POD_LICENSE", "LICENSE"
-      FileUtils.mv "POD_CHANGELOG.md", "CHANGELOG.md"
-      FileUtils.mv "NAME.podspec", "#{pod_name}.podspec"
+      FileUtils.mv "POD_Package.swift", "Package.swift"
+      FileUtils.mv "POD_README.md", "README.md"
     end
 
     def rename_classes_folder
