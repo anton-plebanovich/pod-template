@@ -37,6 +37,10 @@ echo -e "Building Pods project..."
 set -o pipefail && xcodebuild -workspace "Pods Project/${POD_NAME}.xcworkspace" -scheme "${POD_NAME}-Example" -configuration "Release" -sdk iphonesimulator | xcpretty
 echo ""
 
+echo -e "Building Carthage dependencies..."
+bash "./Carthage Project/Scripts/Carthage/carthageInstallTests.command"
+echo ""
+
 echo -e "Building Carthage project..."
 . "./Carthage Project/Scripts/Carthage/utils.sh"
 applyXcode12Workaround
@@ -44,7 +48,7 @@ set -o pipefail && xcodebuild -project "${carthage_xcodeproj_path}" -sdk iphones
 echo ""
 
 echo -e "Building with Carthage..."
-carthage build --no-skip-current --cache-builds
+carthage build --no-skip-current --platform iOS,tvOS --cache-builds
 echo ""
 
 echo -e "Performing tests..."

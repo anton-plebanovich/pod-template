@@ -1,6 +1,7 @@
 # ${POD_NAME}
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
 [![Version](https://img.shields.io/cocoapods/v/${POD_NAME}.svg?style=flat)](http://cocoapods.org/pods/${POD_NAME})
 [![License](https://img.shields.io/cocoapods/l/${POD_NAME}.svg?style=flat)](http://cocoapods.org/pods/${POD_NAME})
 [![Platform](https://img.shields.io/cocoapods/p/${POD_NAME}.svg?style=flat)](http://cocoapods.org/pods/${POD_NAME})
@@ -37,6 +38,18 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod '${POD_NAME}', '~> 1.0'
+```
+
+#### Swift Package Manager
+
+The Swift Package Manager is a tool for automating the distribution of Swift code and is integrated into the swift compiler.
+
+Once you have your Swift package set up, adding `${POD_NAME}` as a dependency is as easy as adding it to the dependencies value of your `Package.swift`.
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/APUtils/${POD_NAME}.git", .upToNextMajor(from: "1.0.0"))
+]
 ```
 
 ## Usage
